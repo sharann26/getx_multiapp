@@ -47,8 +47,6 @@ class SplashState extends State<Splash> with AfterLayoutMixin<Splash> {
     bool _seen = (prefs.getBool('seen') ?? false);
 
     if (_seen) {
-      // Get.to(() => OnboardPage());
-      // Get.to(() => DateTimePicker());
       Get.to(() => AppHomePage());
     } else {
       Get.to(() => OnboardPage());
@@ -74,7 +72,6 @@ class AppHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return DeveloperProfile();
     return LandingPage();
   }
 }

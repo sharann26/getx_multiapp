@@ -9,9 +9,6 @@ class DateTimePicker extends StatefulWidget {
 
 class _DateTimePickerState extends State<DateTimePicker> {
   final datePicker = '';
-  double _height = 0.0;
-  double _width = 0.0;
-  String _setTime = '', _setDate = '';
   String _hour = '', _minute = '', _time = '';
   String dateTime = '';
   DateTime selectedDate = DateTime.now();
@@ -65,8 +62,6 @@ class _DateTimePickerState extends State<DateTimePicker> {
 
   @override
   Widget build(BuildContext context) {
-    _height = MediaQuery.of(context).size.height;
-    _width = MediaQuery.of(context).size.width;
     dateTime = DateFormat.yMMMd('en_US').format(DateTime.now());
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -79,23 +74,12 @@ class _DateTimePickerState extends State<DateTimePicker> {
           child: Container(
             width: 120,
             height: 50,
-            // margin: EdgeInsets.only(top: 30),
             alignment: Alignment.center,
-            // decoration: BoxDecoration(color: Colors.grey[200]),
             child: TextFormField(
               style: TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
               enabled: false,
-              // keyboardType: TextInputType.text,
               controller: _dateController,
-              // onSaved: (val) {
-              //   _setDate = val.toString();
-              // },
-              // decoration: InputDecoration(
-              //     disabledBorder:
-              //         UnderlineInputBorder(borderSide: BorderSide.none),
-              //     // labelText: 'Time',
-              //     contentPadding: EdgeInsets.only(top: 0.0)),
             ),
           ),
         ),
@@ -104,26 +88,15 @@ class _DateTimePickerState extends State<DateTimePicker> {
             _selectTime(context);
           },
           child: Container(
-            // margin: EdgeInsets.only(top: 30),
             width: 120,
             height: 50,
             alignment: Alignment.center,
-            // decoration: BoxDecoration(color: Colors.grey[200]),
             child: TextFormField(
               style: TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
-              // onSaved: (val) {
-              //   _setTime = val.toString();
-              // },
               enabled: false,
               keyboardType: TextInputType.text,
               controller: _timeController,
-              // decoration: InputDecoration(
-              //   disabledBorder:
-              //       UnderlineInputBorder(borderSide: BorderSide.none),
-              //   // labelText: 'Time',
-              //   contentPadding: EdgeInsets.all(5),
-              // ),
             ),
           ),
         ),

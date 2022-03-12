@@ -7,7 +7,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:multi_app/app/modules/todo/home/controller.dart';
 import 'package:get/get.dart';
 import 'package:country_code_picker/country_code_picker.dart';
-import 'package:multi_app/app/widget/icons.dart';
 import 'package:multi_app/app/core/values/colors.dart';
 import 'package:multi_app/app/core/utils/extensions.dart';
 
@@ -18,7 +17,6 @@ class WhatsAppPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final icons = getIcons();
     openwhatsapp(whatsapp) async {
       var whatsappURLAndroid = "whatsapp://send?phone=" + whatsapp;
       var whatappURLIos = "https://wa.me/$whatsapp";
@@ -103,7 +101,6 @@ class WhatsAppPage extends StatelessWidget {
                               controller: homeCtrl.editingCtrl,
                               keyboardType: TextInputType.phone,
                               decoration: const InputDecoration(
-                                // border: OutlineInputBorder(),
                                 labelText: 'Phone number',
                               ),
                               validator: (value) {
@@ -152,65 +149,6 @@ class WhatsAppPage extends StatelessWidget {
           ),
         ],
       ),
-      /* child: Center(
-        child: Padding(
-          padding: EdgeInsets.all(10.0),
-          child: Form(
-            key: homeCtrl.formKey,
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 3.0.wp),
-                  child: Column(
-                    children: [
-                      TextFormField(
-                        controller: homeCtrl.editingCtrl,
-                        decoration: const InputDecoration(
-                          border: OutlineInputBorder(),
-                          labelText: 'Phone number',
-                        ),
-                        validator: (value) {
-                          if (value == null || value.trim().isEmpty) {
-                            return 'Please enter phone number';
-                          }
-                          return null;
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    primary: green,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    minimumSize: const Size(150, 40),
-                  ),
-                  onPressed: () {
-                    if (homeCtrl.formKey.currentState!.validate()) {
-                      int icon =
-                          icons[homeCtrl.chipIndex.value].icon!.codePoint;
-                      String color =
-                          icons[homeCtrl.chipIndex.value].color!.toHex();
-                      var task = Task(
-                        title: homeCtrl.editingCtrl.text,
-                        icon: icon,
-                        color: color,
-                      );
-                      Get.back();
-                      homeCtrl.addTask(task)
-                          ? EasyLoading.showSuccess("Task created")
-                          : EasyLoading.showError("Task is duplicate");
-                    }
-                  },
-                  child: const Text('Message'),
-                )
-              ],
-            ),
-          ),
-        ),
-      ), */
     );
   }
 }

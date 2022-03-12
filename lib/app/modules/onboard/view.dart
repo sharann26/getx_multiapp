@@ -18,8 +18,8 @@ class OnboardPage extends StatelessWidget {
               image: buildImage('assets/images/whatsapp.png'),
               decoration: getPageDecoration()),
           PageViewModel(
-              title: 'Weight Tracker',
-              body: 'To motivate for weight gainer and maintain the weight',
+              title: 'BMI Calculator',
+              body: 'To calculate our bmi value for given weight and height',
               image: buildImage('assets/images/weight_tracker.png'),
               decoration: getPageDecoration()),
           PageViewModel(

@@ -20,37 +20,10 @@ const monthName = {
   "Dec": "12",
 };
 
-List dateFormatList = ["Year", "Month", "Date", "Hour", "Mintue", "Seconds"];
+List dateFormatList = ["Year", "Month", "Date", "Hour", "Minute", "Seconds"];
 
-const APPS_LIST = [
-  {
-    "name": "WhatsApp",
-    "imagePath": "assets/images/whatsapp.png",
-    "desc": "Chat with unsaved number from WhatsApp",
-  },
-  {
-    "name": "Weight Tracker",
-    "imagePath": "assets/images/weight_tracker.png",
-    "desc": "To motivate for weight gainer and maintain the weight",
-  },
-  {
-    "name": "Todo",
-    "imagePath": "assets/images/todo.png",
-    "desc": "Used to maintain our day-to-day tasks that we have to do",
-  },
-];
-
-const FOOD_DATA = [
-  {"name": "Burger", "icon": Icons.add, "color": Colors.blue},
-  {"name": "Cheese Dip", "icon": Icons.close, "color": Colors.green},
-  {"name": "Cola", "icon": Icons.person, "color": Colors.yellow},
-  {"name": "Fries", "icon": Icons.language, "color": Colors.purple},
-  {"name": "Ice Cream", "icon": Icons.notifications, "color": Colors.grey},
-  {"name": "Noodles", "icon": Icons.no_sim, "color": Colors.indigo},
-  {"name": "Pizza", "icon": Icons.sailing, "color": Colors.red},
-  {"name": "Sandwich", "icon": Icons.sanitizer, "color": Colors.pink},
-  {"name": "Wrap", "icon": Icons.save, "color": Colors.brown}
-];
+List heightUnits = ["cm", "meter", "feet + inches"];
+List weightUnits = ["kg", "lbs"];
 
 Color fC = Colors.teal;
 Color mC = Colors.grey.shade100;

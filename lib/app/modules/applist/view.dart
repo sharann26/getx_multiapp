@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:multi_app/app/core/utils/extensions.dart';
 import 'package:multi_app/app/modules/countdown/home/view.dart';
 import 'package:multi_app/app/modules/todo/home/view.dart';
-import 'package:multi_app/app/modules/weight/view.dart';
+import 'package:multi_app/app/modules/bmi/view.dart';
 import 'package:multi_app/app/modules/whatsapp/view.dart';
 
 class AppListPage extends StatelessWidget {
@@ -36,10 +36,10 @@ class AppListPage extends StatelessWidget {
                   color: Colors.greenAccent,
                   appDetail: {"name": "WhatsApp", "icon": FontAwesomeIcons.whatsappSquare}),
               AppInfo(
-                  page: 'WeightTracker',
+                  page: 'BmiCalculator',
                   color: Colors.deepPurpleAccent,
                   appDetail: {
-                    "name": "Weight Tracker",
+                    "name": "Bmi Calculator",
                     "icon": FontAwesomeIcons.weight
                   }),
               AppInfo(
@@ -71,8 +71,8 @@ class AppInfo extends StatelessWidget {
     switch (_page) {
       case 'WhatsAppPage':
         return WhatsAppPage();
-      case 'WeightTracker':
-        return WeightTrackerPage();
+      case 'BmiCalculator':
+        return BmiCalculatorPage();
       case 'CountdownHomePage':
         return CountdownHomePage();
       case 'TodoHomePage':

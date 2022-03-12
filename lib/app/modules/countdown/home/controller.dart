@@ -178,7 +178,6 @@ class CountdownHomeController extends GetxController {
     var hours = todo.time.substring(position + 7, position + 9);
     var mintues = todo.time.substring(position + 10, position + 12);
     var seconds = 0;
-    var is24Hrs = is24hours[todo.time.substring(position + 13, position + 15)];
     return CountDownText(
       due: DateTime.utc(
         int.parse(year.toString()),
@@ -222,7 +221,6 @@ class CountdownHomeController extends GetxController {
     var hours = todo.time.substring(position + 7, position + 9);
     var mintues = todo.time.substring(position + 10, position + 12);
     var seconds = 0;
-    var is24Hrs = is24hours[todo.time.substring(position + 13, position + 15)];
     return DateTime.utc(
       int.parse(year.toString()),
       int.parse(month.toString()),

@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:multi_app/app/core/values/colors.dart';
 import 'package:multi_app/app/core/values/constants.dart';
-import 'package:multi_app/app/data/models/task.dart';
-import 'package:multi_app/app/data/models/todo.dart';
 import 'package:multi_app/app/modules/countdown/home/controller.dart';
 import 'package:get/get.dart';
 import 'package:multi_app/app/core/utils/extensions.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
-import 'package:multi_select_flutter/multi_select_flutter.dart';
-import 'package:multi_app/app/widget/icons.dart';
-import 'dart:convert';
 
 class CountdownDetailPage extends StatelessWidget {
   final homeCtrl = Get.find<CountdownHomeController>();
@@ -20,7 +13,6 @@ class CountdownDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var task = homeCtrl.todo.value!;
     var color = HexColor.fromHex(task.color);
-    List _todos = [];
 
     return WillPopScope(
       onWillPop: () async => false,

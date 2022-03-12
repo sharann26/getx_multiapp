@@ -17,9 +17,6 @@ class CountdownAddCard extends StatefulWidget {
 
 class _CountdownAddCardState extends State<CountdownAddCard> {
   final homeCtrl = Get.find<CountdownHomeController>();
-  double _height = 0.0;
-  double _width = 0.0;
-  String _setTime = '', _setDate = '';
   String _hour = '', _minute = '', _time = '';
   String dateTime = '';
   DateTime selectedDate = DateTime.now();
@@ -108,8 +105,6 @@ class _CountdownAddCardState extends State<CountdownAddCard> {
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 4.0.wp),
                     child: Row(
-                      // crossAxisAlignment: CrossAxisAlignment.center,
-                      // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         InkWell(
                           onTap: () {
@@ -118,23 +113,12 @@ class _CountdownAddCardState extends State<CountdownAddCard> {
                           child: Container(
                             width: 10,
                             height: 10,
-                            // margin: EdgeInsets.only(top: 30),
                             alignment: Alignment.center,
-                            // decoration: BoxDecoration(color: Colors.grey[200]),
                             child: TextFormField(
                               style: TextStyle(fontSize: 18),
                               textAlign: TextAlign.center,
                               enabled: false,
-                              // keyboardType: TextInputType.text,
                               controller: _dateController,
-                              // onSaved: (val) {
-                              //   _setDate = val.toString();
-                              // },
-                              // decoration: InputDecoration(
-                              //     disabledBorder:
-                              //         UnderlineInputBorder(borderSide: BorderSide.none),
-                              //     // labelText: 'Time',
-                              //     contentPadding: EdgeInsets.only(top: 0.0)),
                             ),
                           ),
                         ),
@@ -143,50 +127,20 @@ class _CountdownAddCardState extends State<CountdownAddCard> {
                             _selectTime(context);
                           },
                           child: Container(
-                            // margin: EdgeInsets.only(top: 30),
                             width: 120,
                             height: 50,
                             alignment: Alignment.center,
-                            // decoration: BoxDecoration(color: Colors.grey[200]),
                             child: TextFormField(
                               style: TextStyle(fontSize: 18),
                               textAlign: TextAlign.center,
-                              // onSaved: (val) {
-                              //   _setTime = val.toString();
-                              // },
                               enabled: false,
                               keyboardType: TextInputType.text,
                               controller: _timeController,
-                              // decoration: InputDecoration(
-                              //   disabledBorder:
-                              //       UnderlineInputBorder(borderSide: BorderSide.none),
-                              //   // labelText: 'Time',
-                              //   contentPadding: EdgeInsets.all(5),
-                              // ),
                             ),
                           ),
                         ),
                       ],
                     ),
-                    /* child: Wrap(
-                      spacing: 2.0.wp,
-                      children: icons
-                          .map((e) => Obx(() {
-                                final index = icons.indexOf(e);
-                                return ChoiceChip(
-                                  selectedColor: Colors.grey[200],
-                                  pressElevation: 0,
-                                  backgroundColor: Colors.white,
-                                  label: e,
-                                  selected: homeCtrl.chipIndex.value == index,
-                                  onSelected: (bool selected) {
-                                    homeCtrl.chipIndex.value =
-                                        selected ? index : 0;
-                                  },
-                                );
-                              }))
-                          .toList(),
-                    ), */
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(

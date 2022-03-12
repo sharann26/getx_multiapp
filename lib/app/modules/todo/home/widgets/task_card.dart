@@ -3,7 +3,6 @@ import 'package:multi_app/app/modules/todo/detail/view.dart';
 import 'package:multi_app/app/modules/todo/home/controller.dart';
 import 'package:get/get.dart';
 import 'package:multi_app/app/data/models/task.dart';
-import 'package:multi_app/app/widget/icons.dart';
 import 'package:multi_app/app/core/utils/extensions.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 
@@ -14,7 +13,6 @@ class TaskCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final icons = getIcons();
     final color = HexColor.fromHex(task.color);
     var squareWidth = Get.width - 12.0.wp;
     return GestureDetector(

@@ -263,10 +263,7 @@ class dateTimePicker extends StatelessWidget {
     required this.dateController,
     required this.timeController,
   }) : super(key: key);
-
-  double _height = 0.0;
-  double _width = 0.0;
-  String _setTime = '', _setDate = '';
+  
   String _hour = '', _minute = '', _time = '';
   String dateTime = '';
   DateTime selectedDate = DateTime.now();
@@ -319,23 +316,12 @@ class dateTimePicker extends StatelessWidget {
           child: Container(
             width: 120,
             height: 50,
-            // margin: EdgeInsets.only(top: 30),
             alignment: Alignment.center,
-            // decoration: BoxDecoration(color: Colors.grey[200]),
             child: TextFormField(
               style: TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
               enabled: false,
-              // keyboardType: TextInputType.text,
               controller: dateController,
-              // onSaved: (val) {
-              //   _setDate = val.toString();
-              // },
-              // decoration: InputDecoration(
-              //     disabledBorder:
-              //         UnderlineInputBorder(borderSide: BorderSide.none),
-              //     // labelText: 'Time',
-              //     contentPadding: EdgeInsets.only(top: 0.0)),
             ),
           ),
         ),
@@ -344,26 +330,15 @@ class dateTimePicker extends StatelessWidget {
             _selectTime(context);
           },
           child: Container(
-            // margin: EdgeInsets.only(top: 30),
             width: 120,
             height: 50,
             alignment: Alignment.center,
-            // decoration: BoxDecoration(color: Colors.grey[200]),
             child: TextFormField(
               style: TextStyle(fontSize: 18),
               textAlign: TextAlign.center,
-              // onSaved: (val) {
-              //   _setTime = val.toString();
-              // },
               enabled: false,
               keyboardType: TextInputType.text,
               controller: timeController,
-              // decoration: InputDecoration(
-              //   disabledBorder:
-              //       UnderlineInputBorder(borderSide: BorderSide.none),
-              //   // labelText: 'Time',
-              //   contentPadding: EdgeInsets.all(5),
-              // ),
             ),
           ),
         ),
